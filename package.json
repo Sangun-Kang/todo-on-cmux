@@ -1,0 +1,50 @@
+{
+  "name": "todo-on-cmux",
+  "version": "0.1.0",
+  "description": "Route your TODOs to autonomous Claude Code / Codex sessions running in parallel on cmux.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "cmux",
+    "claude-code",
+    "codex",
+    "todo",
+    "agent",
+    "automation",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sangun-Kang/todo-on-cmux.git"
+  },
+  "homepage": "https://github.com/Sangun-Kang/todo-on-cmux#readme",
+  "bugs": {
+    "url": "https://github.com/Sangun-Kang/todo-on-cmux/issues"
+  },
+  "bin": {
+    "toc": "dist/index.js",
+    "todo-on-cmux": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "config.example.yaml",
+    "README.md",
+    "README.ja.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "dev": "node --no-warnings --experimental-strip-types src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "yaml": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
